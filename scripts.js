@@ -1,8 +1,8 @@
-const burger = document.getElementById('burGer');
-const burgerCont = document.getElementById('burgerContainer');
-burger.addEventListener('click', () => {
-    burgerCont.classList.toggle('active');
-});
+// const burger = document.getElementById('burGer');
+// const burgerCont = document.getElementById('burgerContainer');
+// burger.addEventListener('click', () => {
+//     burgerCont.classList.toggle('active');
+// });
 
 
 
@@ -10,7 +10,7 @@ burger.addEventListener('click', () => {
 
 
 
-function newFunction() {
+function initFormValidation() {
     const form = document.getElementById("formAltas");
 
     const inputName = document.getElementById("userName");
@@ -19,82 +19,91 @@ function newFunction() {
     const inputStock = document.getElementById("Stock");
     const inputFoto = document.getElementById("Foto");
 
-    const Error = document.getElementById("ErrorMensaje");
+    const error = document.getElementById("ErrorMensaje");
 
     const regexName = /^[a-zA-Z\s]{3,}$/;
     const regexPrice = /^\d+(\.\d{1,2})?$/;
     const regexAge = /^\d+$/;
     const regexStock = /^\d+$/;
-    const archivo = inputFoto.File[0];
-
-
+    
+    
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-
-        if (!regexName.test(inputName.Value)) {
-            Error.textContent = "Error: nombre invalido(Minimo 3 caracteres)";
+        
+        if (!regexName.test(inputName.value)) {
+            error.textContent ="error: nombre inválido(Minimo 3 caracteres";
             return;
         }
-
-        if (!regexPrice.test(inputPrice.Value)) {
-            Error.textContent = "Error precio invalidado";
+        
+        if (!regexPrice.test(inputPrice.value)) {
+            error.textContent = "error precio inválido";
             return;
         }
-
-        if (!regexAge.test(inputAge.Value)) {
-            Error.textContent = "Error edad invalida";
+        
+        if (!regexAge.test(inputAge.value)) {
+            error.textContent ="error edad inválido";
             return;
         }
-        if (!regexStock.test(inputStock.Value)) {
-            Error.textContent = "Error  stock invalidado";
+        if (!regexStock.test(inputStock.value)) {
+            error.textContent ="error  stock inválido";
             return;
         }
         if (inputFoto.Files.length === 0) {
-            Error.textContent = "Error: eligir una imagen invalidado";
+            error.textContent ="error: eligir una imagen inválido";
             return;
         }
+        const archivo = inputFoto.Files[0];
         if (!archivo.type.startsWith("image/")) {
-            Error.textContent = "Error invalidado";
+            error.textContent = "error inválido";
             return;
         }
 
-        Error.textContent = "";
+        error.textContent = "";
         alert("Formulario enviado correctamente ✔")
-        form.reset();
+        formAltas.reset();
 
     });
 }
 
-newFunction();
+initFormValidation();
  
 
-function contFunction() { 
+function initContactValidation() { 
     
-    const fromingres = document.getElementById("formIngres");
-    const inputName = document.getElementById("Username")
-    const inputEmail = document.getElementById("Email")
+    const froming = document.getElementById("formIng");
+    const inputName = document.getElementById("username")
+    const inputEmail = document.getElementById("email")
+    const inputComments = document.getElementById("comentarios");
+    const error = document.getElementById("ErrorMensaje")
     
-    const Error = document.getElementById("ErrorMensaje")
-    
-    const regexName = /^[a-zA-Z]{3,}$/;
-    const regexMail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const regexName = /^[a-zA-Z\s]{3,}$/;
+    const regexMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
 
-fromingres.addEventListener("submit",(event) => {
+froming.addEventListener("submit",(event) => {
     event.preventDefault();
 
 
-    if (!regexName.test(inputName.Value)) {
-        Error=textContent("Error: nombre invalido");
+    if (!regexName.test(inputName.value)) {
+        error.textContent = "Error: nombre ";
         return;
     }
-    if (!regexMail.test(inputEmail.Value)) {        texto= textContent(" Error: email invalio");
-        return;
-    }
-   })
 
-   Error = textContent("Enviado con existo") ;
+    if (!regexMail.test(inputEmail.value)) { 
+         error.textContent ="Error: email ";
+        return;
+    }
+
+    if (inputComments.value.length < 10) {
+        error.textContent = "Error: el comentario debe tener al menos 10 caracteres";
+        return;
+    }
+
+    error.textContent= "";
+    alert("Mensaje enviado con éxito ✔");
+    froming.reset();
+   });
 }
 
-contFunction();
+ initContactValidation();

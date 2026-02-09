@@ -454,7 +454,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   font-family: cursive;
   font-size: x-large;
   align-self: center;
-  border: 1px solid brown;
 }
 .about__stand-book {
   display: flex;
@@ -464,7 +463,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   color: #180e1c;
   max-width: 100%;
   max-height: 400px;
-  gap: 5rem;
   margin-bottom: 1rem;
 }
 .about__stand-book img {
@@ -484,7 +482,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   color: #180e1c;
   max-width: 100%;
   max-height: 400px;
-  gap: 5rem;
   margin-bottom: 1rem;
 }
 .about__stand-pay img {
@@ -504,7 +501,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   color: #180e1c;
   max-width: 100%;
   max-height: 400px;
-  gap: 5rem;
   margin-bottom: 1rem;
 }
 .about__learning-space img {
@@ -524,7 +520,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   color: #180e1c;
   max-width: 100%;
   max-height: 400px;
-  gap: 5rem;
   margin-bottom: 1rem;
 }
 .about__team img {
@@ -537,7 +532,7 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   align-self: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 942px) {
   .layout-container {
     margin-top: 60px;
   }
@@ -562,6 +557,39 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   input {
     font-size: 13px;
     max-width: 80%;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  .about div {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .about p {
+    font-size: x-small;
+  }
+}
+@media (max-width: 1200px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  .about div {
+    display: flex;
+    padding: 2px;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  .about p {
+    font-size: large;
   }
 }
 @media (max-width: 1440px) {

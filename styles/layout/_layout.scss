@@ -207,7 +207,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
           font-family: cursive;
           font-size: x-large; 
           align-self:  center; 
-          border: 1px solid brown;
         }
     }
     &__stand-book {
@@ -219,7 +218,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
         color: $secondary-dark-color;
         max-width: 100%;
         max-height: 400px;
-        gap: 5rem;
         margin-bottom: 1rem;
         img{
             border-radius: 8px;
@@ -239,7 +237,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
         color: $secondary-dark-color;
         max-width: 100%;
         max-height: 400px;
-        gap: 5rem;
         margin-bottom: 1rem;
         img{
             border-radius: 8px;
@@ -260,7 +257,6 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
         color: $secondary-dark-color;
         max-width: 100%;
         max-height: 400px;
-        gap: 5rem;
         margin-bottom: 1rem;
         img{
             border-radius: 8px;
@@ -281,7 +277,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
         color: $secondary-dark-color;
         max-width: 100%;
         max-height: 400px;
-        gap: 5rem;
+        
         margin-bottom: 1rem;
         img{
             border-radius: 8px;
@@ -296,7 +292,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
 }
 
 
-@media (max-width: 768px ) {
+@media (max-width: 942px ) {
 
     .layout-container{
         margin-top: $header-height-m-t;
@@ -324,6 +320,42 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
         font-size: 13px;
         max-width: 80%;
     }
+    .about{
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: space-between;
+       
+        div{
+            display: flex;
+            flex-direction: column;
+            padding: 2px ;
+            max-height: fit-content;
+        }
+
+        p{
+            font-size: x-small;
+        }
+    }
+ }
+ @media(max-width: 1200px) {
+    .about{
+         display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: space-between;
+       
+        div{
+            display: flex;
+            padding: 2px ;
+            max-height: fit-content;
+        }
+        
+        p{
+            font-size: large;
+        }
+    }
+    
  }
 
 
