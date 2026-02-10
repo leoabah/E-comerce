@@ -604,7 +604,6 @@ input[type=text], input[type=password], input[type=email], input[type=number], i
   background-color: #101320;
   color: #f8f6e7;
   position: relative;
-  bottom: -122px;
   width: 100%;
 }
 
