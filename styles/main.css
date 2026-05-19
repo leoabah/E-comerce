@@ -171,6 +171,21 @@ h1, h2, h3, h4, p, span, div {
   color: #f8f6e7;
 }
 
+.btn-carrito {
+  border: transparent;
+  border-radius: 40%;
+  background-color: #f8e18c;
+}
+
+.carrito {
+  width: 4rem;
+}
+
+.btn-carrito:hover {
+  background-size: auto;
+  background-color: #d80608;
+}
+
 @media (max-width: 1150px) {
   .header__container {
     height: 60px;
@@ -219,9 +234,14 @@ h1, h2, h3, h4, p, span, div {
   .burger-container.active {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 6rem;
     padding: 10px;
+  }
+  .form-Header {
+    position: absolute;
+    width: 11rem;
+    margin-top: 4rem;
   }
   .ul-navbar {
     flex-direction: column;

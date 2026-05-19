@@ -121,6 +121,18 @@
    text-decoration: none;
    color: $light-font-color;
  }
+.btn-carrito{
+    border: transparent;
+    border-radius: 40%;
+    background-color: $primary-light-color;
+}
+ .carrito{
+    width: 4rem;
+ }
+ .btn-carrito:hover{
+    background-size: auto;
+    background-color: $primary-dark-color;
+ }
 
 
 @media (max-width: 1150px) {
@@ -176,10 +188,16 @@
     .burger-container.active{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         gap: 6rem;
         padding: 10px;
     }
+    .form-Header {
+        position: absolute;
+        width: 11rem;
+        margin-top: 4rem;
+    }
+
     .ul-navbar{ 
         flex-direction: column;
         gap: 1rem;
@@ -188,7 +206,7 @@
     }
      .ul-navbar  li a:hover{
     padding:0.5rem;   
- }
+    }
    
 }
 
